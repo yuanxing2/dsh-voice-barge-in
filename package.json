@@ -1,0 +1,65 @@
+{
+  "name": "dsh-voice-barge-in",
+  "version": "0.1.0",
+  "description": "Hands-free voice input with barge-in and voiceprint for DeepSeek Harness",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "voice",
+    "speech-to-text",
+    "barge-in",
+    "voiceprint",
+    "sensevoice",
+    "vad"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "check": "node --check lib/client.js",
+    "test": "node test/smoke.mjs && node test/host.mjs && node test/flow.mjs"
+  },
+  "license": "MIT",
+  "author": "yuanxing2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanxing2/dsh-voice-barge-in.git"
+  },
+  "homepage": "https://github.com/yuanxing2/dsh-voice-barge-in",
+  "bugs": {
+    "url": "https://github.com/yuanxing2/dsh-voice-barge-in/issues"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-session-controller"
+      ]
+    }
+  }
+}
