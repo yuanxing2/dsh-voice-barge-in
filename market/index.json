@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "metadata": {
+    "categories": {
+      "voice": {
+        "title": {
+          "en": "Voice & Speech",
+          "zh": "语音与语音识别"
+        }
+      }
+    },
+    "labels": {
+      "hands-free": {
+        "title": {
+          "en": "Hands-free",
+          "zh": "免提"
+        }
+      },
+      "voiceprint": {
+        "title": {
+          "en": "Voiceprint",
+          "zh": "声纹"
+        }
+      },
+      "local": {
+        "title": {
+          "en": "Local / offline",
+          "zh": "本地离线"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-voice-barge-in",
+      "title": {
+        "en": "Hands-free Voice Input & Barge-in",
+        "zh": "免提语音输入与打断"
+      },
+      "description": {
+        "en": "Always-on voice input for DeepSeek Harness: live transcript in the composer, automatic send after a pause, voice barge-in that steers the running turn, and a local voiceprint gate that only accepts registered speakers.",
+        "zh": "DeepSeek Harness 的免提语音输入：说话实时写进输入框、停顿后自动发送、说话可打断当前回合并插入新指令，并可用本地声纹只接受已注册说话人。"
+      },
+      "author": "yuanxing2",
+      "homepage": "https://github.com/yuanxing2/dsh-voice-barge-in",
+      "repository": {
+        "url": "https://github.com/yuanxing2/dsh-voice-barge-in"
+      },
+      "metadata": {
+        "category": "voice",
+        "keywords": [
+          "voice",
+          "speech-to-text",
+          "barge-in",
+          "voiceprint",
+          "sensevoice",
+          "hands-free"
+        ],
+        "labels": [
+          "hands-free",
+          "voiceprint",
+          "local"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792374154,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/yuanxing2/dsh-voice-barge-in",
+            "commit": "43ac8313aae7759a6b9df29293ef37c22d4a3408"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2"
+          }
+        }
+      ]
+    }
+  ]
+}
